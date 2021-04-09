@@ -151,4 +151,8 @@ Corresponding codes will be released after acceptance.
 
 [Gen-LaneNet](https://github.com/yuliangguo/Pytorch_Generalized_3D_Lane_Detection)
 
+<<<<<<< HEAD
 [LSTR](https://github.com/liuruijin17/LSTR)
+=======
+[LSTR](https://github.com/liuruijin17/LSTR)
+>>>>>>> cfdd5ed976e31042dd0998e2fec598ffdb69314a
