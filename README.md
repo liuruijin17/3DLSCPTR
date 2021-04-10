@@ -4,6 +4,10 @@
 * Predicting 3D lanes and camera pose from a single image.
 * Learning via geometry constraints to improve performances on both tasks.
 
+![3DLSCPTRDEMO](.github/demo.jpg)
+
+![3DLSCPTRCOMP](.github/comp.jpg)
+
 ## Model Zoo
 The pretrained models are stored in 3DLSCPTRZoos/
 
