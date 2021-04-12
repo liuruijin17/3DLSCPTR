@@ -11,36 +11,41 @@
 ## Model Zoo
 The pretrained models are stored in 3DLSCPTRZoos/
 
-## Data Preparation
-Download and extract ApolloSim from [yuliangguo/3D_Lane_Synthetic_Dataset](https://github.com/yuliangguo/3D_Lane_Synthetic_Dataset)
-
-We expect the directory structure to be the following:
-```
-3DLSCPTR/
-3DLSCPTRZoos/
-Apollo_Sim_3D_Lane_Release
-```
-
 ## Set Envirionment
 
 * Linux ubuntu 16.04
+* GeForce RTX 3090
+* Python 3.8.5
+* CUDA 11.1
 
-Create conda envirionment
+Create virtualenv environment
 
 ```
-conda env create --name 3dlscptr --file environment.txt
+python3 -m venv 3dlscptr
 ```
 
 Activate it
 
 ```
-conda activate pvtv
+source 3dlscptr/bin/activate
 ```
 
-Then install python dependencies
+Then install dependencies
 
 ```
+pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
 pip install -r requirements.txt
+```
+
+## Data Preparation
+Download and extract ApolloSim from [yuliangguo/3D_Lane_Synthetic_Dataset](https://github.com/yuliangguo/3D_Lane_Synthetic_Dataset)
+
+We expect the directory structure to be the following:
+```
+3dlscptr/
+3DLSCPTR/
+3DLSCPTRZoos/
+Apollo_Sim_3D_Lane_Release/
 ```
 
 ## Evaluation
@@ -123,6 +128,7 @@ python test.py Tv-stage_illus_chg --predcam
 |     |Pv-Tv(ours)   |No  |0.078     |0.164   |84.9   |86.6|0.103       |0.501      |0.050       |0.308      |
 
 Comparisons of the upper bounds. All methods are fed with perfect camera poses during testing phase. GTSeg means the requirement of ground truth lane segmentation.
+
 |Scene             |Method        |GTSeg|F-Score|AP  |
 |------------------|--------------|-----|-------|----|
 |                  |3D-LaneNet    |No   |86.4   |89.3|
@@ -139,6 +145,7 @@ Comparisons of the upper bounds. All methods are fed with perfect camera poses d
 |                  |Tv-stage(ours)|No   |86.1   |88.0|
 
 Comparisons of resource consumption. 1 MAC is approx. 2 FLOPs. PP means the requirement of post processing.
+
 |Method     |FPS|MACs(G)|Para(M)|PP |
 |-----------|---|-------|-------|---|
 |3D-LaneNet |53 |60.47  |20.6   |Yes|
