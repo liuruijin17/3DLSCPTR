@@ -3,6 +3,7 @@
 
 * Predicting 3D lanes and camera pose from a single image.
 * Learning via geometry constraints to improve performances on both tasks.
+* This work has been accepted by AAAI2022.
 
 ![3DLSCPTRDEMO](.github/demo.jpg)
 
