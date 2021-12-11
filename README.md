@@ -3,7 +3,7 @@
 
 * Predicting 3D lanes and camera pose from a single image.
 * Learning via geometry constraints to improve performances on both tasks.
-* This work has been accepted by AAAI2022.
+* This work has been accepted by AAAI2022. Codes in this repo is a eariler version, the latest version will be released at [CLGo](https://github.com/liuruijin17/CLGo).
 
 ![3DLSCPTRDEMO](.github/demo.jpg)
 
